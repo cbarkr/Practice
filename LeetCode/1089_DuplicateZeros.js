@@ -10,12 +10,10 @@ var duplicateZeros = function(arr) {
     while (i < arr.length){
         if (arr[i] === 0){
             arr.splice(i, 0, 0)
+            arr.pop()
             i++
-            dupCount++
         }
         
         i++
     }
-    
-    arr.splice(arr.length - dupCount, dupCount)
 };
