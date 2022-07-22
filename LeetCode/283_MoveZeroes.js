@@ -3,18 +3,17 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-    let count = 0;
+    let nonZeroCount = 0
     
-    var swapVals = function(nums, a, b){
-        var temp = nums[a];
-        nums[a] = nums[b];
-        nums[b] = temp;
+    var swap = (nums, a, b) => {
+        let temp = nums[a]
+        nums[a] = nums[b]
+        nums[b] = temp
     }
     
     for (let i = 0; i < nums.length; i++){
         if (nums[i] !== 0){
-            swapVals(nums, i, count);
-            count++;
-        }
+            swap(nums, i, nonZeroCount)
+        }        
     }
 };
