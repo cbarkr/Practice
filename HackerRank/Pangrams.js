@@ -15,7 +15,7 @@ function pangrams(s) {
     
     for (let i = 0; i < s.length; i++){
         let count = map.get(s[i])
-        map.set(s[i], count !== undefined ? count+1 : 1)
+        map.set(s[i], count ? count+1 : 1)
     }
     
     if (map.size !== 26){ return "not pangram" }
