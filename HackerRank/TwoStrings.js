@@ -14,13 +14,13 @@ function twoStrings(s1, s2) {
     // Build frequency map for characters in s1
     for (let i = 0; i < s1.length; i++){
         let count = map.get(s1[i])
-        map.set(s1[i], count === undefined ? 1 : count + 1)
+        map.set(s1[i], !count ? 1 : count + 1)
     }
     
     // If any character in s2 is in the map, return immediately
     for (let j = 0; j < s2.length; j++){
         let count = map.get(s2[j])
-        if (count !== undefined){ return "YES" } 
+        if (count){ return "YES" } 
     }
     
     return "NO"
