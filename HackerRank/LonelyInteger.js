@@ -15,7 +15,7 @@ function lonelyinteger(a) {
     
     for (let i = 0; i < a.length; i++){
         let count = map.get(a[i])
-        map.set(a[i], count !== undefined ? count+1 : 1)
+        map.set(a[i], count ? count+1 : 1)
     }
     
     map.forEach(function(value, key){ if (value == 1){ res = key } })
