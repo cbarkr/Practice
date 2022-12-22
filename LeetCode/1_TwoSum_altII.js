@@ -8,7 +8,7 @@ var twoSum = function(nums, target) {
     
     for (let i = 0; i < nums.length; i++){
         let count = numsMap.get(target - nums[i])
-        if (count !== undefined){
+        if (count){
             return [nums.indexOf(target-nums[i]), i]
         }
         
