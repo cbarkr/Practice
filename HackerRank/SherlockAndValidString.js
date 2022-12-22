@@ -14,7 +14,7 @@ function isValid(s) {
     // Populate frequency map
     for (let i = 0; i < s.length; i++){
         let count = map.get(s[i])
-        map.set(s[i], count === undefined ? 1 : count+1)
+        map.set(s[i], !count ? 1 : count+1)
     }
     
     // Get count of first element in string
