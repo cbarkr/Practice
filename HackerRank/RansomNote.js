@@ -14,14 +14,14 @@ function checkMagazine(magazine, note) {
     // Build frequency map of strings in magazine
     for (let i = 0; i < magazine.length; i++){
         let count = map.get(magazine[i])
-        map.set(magazine[i], count === undefined ? 1 : count + 1)
+        map.set(magazine[i], !count ? 1 : count + 1)
     }
     
     // Decrease count for each string needed for note
     // Add to map and set count to -1 if not in map
     for (let j = 0; j < note.length; j++){
         let count = map.get(note[j])
-        map.set(note[j], count === undefined ? -1 : count - 1)
+        map.set(note[j], !count ? -1 : count - 1)
     }
     
     // Iterate over map
