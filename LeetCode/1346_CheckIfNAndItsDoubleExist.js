@@ -10,12 +10,12 @@ var checkIfExist = function(arr) {
             map.set(arr[i-1], i-1);
         }
         
-        if (map.get(2 * arr[i]) !== undefined){ 
+        if (map.get(2 * arr[i])){ 
             return true;
         }
         
         if (arr[i] % 2 == 0){
-            if (map.get((arr[i]/2)) !== undefined){
+            if (map.get((arr[i]/2))){
                 return true;
             }
         }
